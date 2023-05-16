@@ -728,3 +728,154 @@ To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
 
 ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
 ```
+
+### Exercises 2
+
+```bash
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+* ft/faq-page
+  ft/service-redesign
+  ft/team-page
+  main
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git commit -m 'added main and footer to pages'
+[main 4aaace4] added main and footer to pages
+ 2 files changed, 4 insertions(+)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 455 bytes | 455.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+   b896cb6..4aaace4  main -> main
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git log
+commit f49d2f459d87b7b4e517df91e30863fcebb032c0 (HEAD -> ft/home-page-redesign, origin/ft/faq-page, ft/faq-page)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:38:42 2023 +0200
+
+    Revert "adding team page"
+
+    This reverts commit ded7d458d8b78dde252793d6282f81e3bc837878.
+
+commit 40ba271c0663ac67533b27d34676284725acd0de
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:36:30 2023 +0200
+
+    add faq page
+
+commit db4623851ad5fd2e7f46b351ecd051bf23fef946 (origin/ft/contact-page, ft/contact-page)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:32:44 2023 +0200
+
+    added contact page setup
+
+commit 3d5cbffbacaff7fa4533ac877fe602976d99059a
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:19:01 2023 +0200
+
+    adding team page
+
+commit 42a175162dea0fca46de7c515bf978deed90808c
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:10:53 2023 +0200
+
+    add Exercise 2
+
+commit be335d09b9acd078cc2daf2a36468d4988d4ad00
+Merge: 4bce6af 0b5a2a2
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:05:53 2023 +0200
+
+    Merge branch 'main' of https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git commit -m 'add changes to home pages'
+[ft/home-page-redesign 060cd8b] add changes to home pages
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.59 KiB | 815.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+```
