@@ -434,3 +434,297 @@ nothing to commit, working tree clean
 
 ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
 ```
+## Bundle 3 
+
+### Exercise 1 
+
+```bash 
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ touch team.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git status
+On branch ft/team-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git commit -m 'adding team page'
+[ft/team-page ded7d45] adding team page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$  git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 468 bytes | 468.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git log
+commit ded7d458d8b78dde252793d6282f81e3bc837878 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:19:01 2023 +0200
+
+    adding team page
+
+commit 42a175162dea0fca46de7c515bf978deed90808c (origin/main, main, ft/contact-page)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:10:53 2023 +0200
+
+    add Exercise 2
+
+commit be335d09b9acd078cc2daf2a36468d4988d4ad00
+Merge: 4bce6af 0b5a2a2
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 12:05:53 2023 +0200
+
+    Merge branch 'main' of https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions
+
+commit 4bce6af0f6db6ca5e1774046968a32257503682a
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 11:49:28 2023 +0200
+
+    add changes from main branch
+
+commit 0b5a2a26cc2eeddd5d163533afc8c285c44d547e
+Merge: 73f53d3 45f6083
+Author: zachee ishimwe <zacheeishimwe@gmail.com>
+Date:   Tue May 16 11:46:40 2023 +0200
+
+    Merge pull request #2 from ishimwezachee/ft/service-redesign
+
+    Add changes to service page
+
+commit 45f6083d9465024ffd72f0b0ed4d69608645e9fe (origin/ft/service-redesign, ft/service-redesign)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 11:39:40 2023 +0200
+
+    add changes to service page
+
+commit 73f53d38303efd9dbde036712751c6e307a9ab71
+Merge: 2ee733f 622ec30
+Author: zachee ishimwe <zacheeishimwe@gmail.com>
+Date:   Tue May 16 11:02:19 2023 +0200
+
+    Merge pull request #1 from ishimwezachee/ft/bundle-2
+
+    Add service page
+
+commit 622ec30d24543b917dd446d709c9dd6104a7df61 (origin/ft/bundle-2, ft/bundle-2)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 10:55:56 2023 +0200
+
+    add exercise1 bundle 2
+
+commit 2caf2cb4843cf13dc924e229a720cccf70d9dcaf
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 10:49:06 2023 +0200
+
+    add services page
+
+commit e2ddd303a3565026709b74342f856cf33e8fe6c2 (origin/dev, dev)
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 10:46:06 2023 +0200
+
+    add exercise 2
+
+commit 161a334d876384d16e44b6a27cdc138c3c5308ed
+Author: ishimwezachee <zacheeishimwe@gmail.com>
+Date:   Tue May 16 10:42:24 2023 +0200
+
+    add home and about page
+
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git cherry-pick ded7d458d8b78dde252793d6282f81e3bc837878
+[ft/contact-page 3d5cbff] adding team page
+ Date: Tue May 16 12:19:01 2023 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git touch contact.html
+git: 'touch' is not a git command. See 'git --help'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ touch contact.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ cat contact.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <h1>This is contact page</h1>
+</body>
+</html>
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ gi commit -m 'added contact page setup'
+bash: gi: command not found
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m 'added contact page setup'
+[ft/contact-page db46238] added contact page setup
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 741 bytes | 741.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ touch faq.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git commit -m 'add faq page'
+[ft/faq-page 40ba271] add faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 449 bytes | 449.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git revert ded7d458d8b78dde252793d6282f81e3bc837878
+[ft/faq-page f49d2f4] Revert "adding team page"
+ 1 file changed, 12 deletions(-)
+ delete mode 100644 team.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 274 bytes | 274.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+   40ba271..f49d2f4  ft/faq-page -> ft/faq-page
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/faq-page)
+```
