@@ -879,3 +879,68 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash 
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git remote add git-copy https://github.com/ishimwezachee/git-exercise-clone.git
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git remote
+git-copy
+origin
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git commit -m 'content to main in home page'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git commit -m 'content to main in home page'
+[main a7d0c91] content to main in home page
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+   cac191a..a7d0c91  main -> main
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push git-copy
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (44/44), 9.81 KiB | 436.00 KiB/s, done.
+Total 44 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/ishimwezachee/git-exercise-clone.git
+ * [new branch]      main -> main
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+```
