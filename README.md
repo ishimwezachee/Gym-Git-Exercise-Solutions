@@ -300,3 +300,137 @@ $
 
 ```
 
+
+### Exercise 2
+
+```bash
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git commit -m 'add changes to service page'
+[ft/service-redesign 45f6083] add changes to service page
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 348 bytes | 348.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git commit -m 'add changes from main branch'
+[main 4bce6af] add changes from main branch
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 638 bytes | 14.00 KiB/s, done.
+From https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions
+   73f53d3..0b5a2a2  main       -> origin/main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.  
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main|MERGING)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main|MERGING)
+$ git commit
+[main be335d0] Merge branch 'main' of https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 546 bytes | 546.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+   0b5a2a2..be335d0  main -> main
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+```
