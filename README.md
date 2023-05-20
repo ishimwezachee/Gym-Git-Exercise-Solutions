@@ -945,7 +945,7 @@ To https://github.com/ishimwezachee/git-exercise-clone.git
 ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
 ```
 
-### Exercise 3
+### Exercise 2
 ```bash
 ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
 $ git checkout -b ft/footer
