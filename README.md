@@ -1075,3 +1075,127 @@ branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 
 ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (ft/squashing)
 ```
+
+## Bundle 5
+
+### Exercise 1
+```bash
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git commit -m 'change home to index'
+[main ae46921] change home to index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 235 bytes | 39.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ishimwezachee/Gym-Git-Exercise-Solutions.git
+   f18131e..ae46921  main -> main
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git push git-copy
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.74 KiB | 595.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/ishimwezachee/git-exercise-clone.git
+   a7d0c91..ae46921  main -> main
+
+```
+### Exercise 2
+
+```bash
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ git clone https://github.com/ishimwezachee/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 100
+Receiving objects: 100% (107/107), 1.95 MiB | 157.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ ls
+README.md  about.html  git-cafe-exercise/  index.html  services.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ mv git-cafe-exercise ../
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ ls
+README.md  about.html  index.html  services.html
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/Gym-Git-Exercise-Solutions (main)
+$ cd ..
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings
+$ ls
+Gym-Git-Exercise-Solutions/  git-cafe-exercise/
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings
+$ cd git-cafe-exercise/
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/git-cafe-exercise (main)
+$ code .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/git-cafe-exercise (main)
+$ git add .
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/git-cafe-exercise (main)
+$ git commit -m 'feature rename'
+[main 528b85d] feature rename
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ZACHEE@DESKTOP-JM7SBUV MINGW64 ~/Desktop/thegym/trainings/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ishimwezachee/git-cafe-exercise.git
+   d1d3f9c..528b85d  main -> main
+```
